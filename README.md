@@ -1,17 +1,19 @@
 # validator-keys-tool
 
-Rippled validator key generation tool
+xahaud validator key generation tool
 
 
 ## Build
+The build requirements and commands are the exact same as
+[those for rippled](https://github.com/XRPLF/rippled/blob/develop/BUILD.md).
 
 If you do not have package `xrpl` in your local Conan cache, it can be added by following the instructions in the [BUILD.md](https://github.com/XRPLF/rippled/blob/master/BUILD.md#patched-recipes) file in the rippled GitHub repository.
 
-The build requirements and commands are the exact same as
-[those](https://github.com/XRPLF/rippled/blob/develop/BUILD.md) for rippled.
-In short:
+Example build instructions:
 
 ```
+git clone [this repo]
+cd [this repo]
 mkdir .build
 cd .build
 conan install .. --output-folder . --build missing

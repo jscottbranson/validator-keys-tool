@@ -107,7 +107,7 @@ createToken(boost::filesystem::path const& keyFile)
     keys.writeToFile(keyFile);
 
     std::cout
-        << "Update rippled.cfg file with these values and restart rippled:\n\n";
+        << "Update xahaud.cfg file with these values and restart xahaud:\n\n";
     std::cout << "# validator public key: "
               << toBase58(TokenType::NodePublic, keys.publicKey()) << "\n\n";
     std::cout << "[validator_token]\n";
@@ -138,7 +138,7 @@ createRevocation(boost::filesystem::path const& keyFile)
     keys.writeToFile(keyFile);
 
     std::cout
-        << "Update rippled.cfg file with these values and restart rippled:\n\n";
+        << "Update xahaud.cfg file with these values and restart xahaud:\n\n";
     std::cout << "# validator public key: "
               << toBase58(TokenType::NodePublic, keys.publicKey()) << "\n\n";
     std::cout << "[validator_key_revocation]\n";
@@ -229,8 +229,8 @@ setDomain(std::string const& domain, boost::filesystem::path const& keyFile)
     attestDomain(keys);
 
     std::cout << "\n";
-    std::cout << "You also need to update the rippled.cfg file to add a new\n";
-    std::cout << "validator token and restart rippled:\n\n";
+    std::cout << "You also need to update the xahaud.cfg file to add a new\n";
+    std::cout << "validator token and restart xahaud:\n\n";
     std::cout << "# validator public key: "
               << toBase58(TokenType::NodePublic, keys.publicKey()) << "\n\n";
     std::cout << "[validator_token]\n";
@@ -465,7 +465,7 @@ main(int argc, char** argv)
     std::string const defaultKeyFile =
         (homeDir.empty() ? boost::filesystem::current_path().string()
                          : homeDir) +
-        "/.ripple/validator-keys.json";
+        "/.xahaud/validator-keys.json";
 
     try
     {
