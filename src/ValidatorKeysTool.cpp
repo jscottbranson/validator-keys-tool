@@ -173,7 +173,7 @@ attestDomain(ripple::ValidatorKeys const& keys)
                      toBase58(TokenType::NodePublic, keys.publicKey()) + "]")
               << "\"\n\n";
 
-    std::cout << "You should include it in your xrp-ledger.toml file in the\n";
+    std::cout << "You should include it in your xah-ledger.toml file in the\n";
     std::cout << "section for this validator.\n";
 }
 
